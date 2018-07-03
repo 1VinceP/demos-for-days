@@ -16,9 +16,6 @@ class StripeDemo extends Component {
     }
 
     render() {
-
-        console.log( this.state.cost )
-
         return (
             <div style={{ height: '100vh', width: '100%' }}>
                 <input placeholder='Enter Price' onChange={e => this.setState({ cost: e.target.value * 100 })} />
