@@ -9,6 +9,7 @@ class StripeDemo extends Component {
 
     onToken = token => {
         token.card = void 0;
+        // See server/server.js for the server side of Stripe
         axios.post( '/api/payment', { token, amount: this.state.cost /* This is the amount actually charged */ } )
             .then( response => {
                 alert('Thanks for your purchase!')
